@@ -1,0 +1,25 @@
+#注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9999/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+
+#本地服务注册端口
+server:
+  port: 9998
+spring:
+  application:
+    name: cloud-config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+
+management:
+  security:
+    enabled: false

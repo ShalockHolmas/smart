@@ -1,0 +1,19 @@
+server:
+  port: 9997
+spring:
+  application:
+    name: starter
+  profiles:
+    active: work
+  cloud:
+    config:
+      uri: http://localhost:9998
+      profile: home
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9999/eureka
+management:
+  security:
+    enabled: false

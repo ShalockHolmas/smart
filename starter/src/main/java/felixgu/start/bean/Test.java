@@ -9,7 +9,7 @@ public class Test {
     @Value("${test}")
     private String test;
 
-    @Value("${config.test.name}")
+    @Value("${cloud.config.test}")
     private String configtest;
 
     public String getConfigtest() {
